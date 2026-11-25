@@ -1,0 +1,10 @@
+{
+  "uuid": "motivation-quotes@arjun",
+  "name": "Motivation Quotes",
+  "description": "Shows one of your own motivational quotes in the top bar. Rotates on a timer or once a day; scroll to change it, click to star, copy or step back. Add your own quotes and style it in Settings.",
+  "shell-version": [
+    "50",
+    "51"
+  ],
+  "settings-schema": "org.gnome.shell.extensions.motivation-quotes"
+}

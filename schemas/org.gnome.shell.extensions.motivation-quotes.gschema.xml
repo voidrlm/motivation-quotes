@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemalist>
+  <schema id="org.gnome.shell.extensions.motivation-quotes" path="/org/gnome/shell/extensions/motivation-quotes/">
+    <!-- Quotes -->
+    <key name="source" type="s">
+      <choices>
+        <choice value="all"/>
+        <choice value="favorites"/>
+      </choices>
+      <default>'all'</default>
+      <summary>Show all of your quotes, or only starred ones</summary>
+    </key>
+    <key name="custom-quotes" type="s">
+      <default>''</default>
+      <summary>Your own quotes (JSON list of {text, author})</summary>
+    </key>
+    <key name="favorites" type="as">
+      <default>[]</default>
+      <summary>Starred quotes (by text)</summary>
+    </key>
+
+    <!-- Rotation -->
+    <key name="rotate-mode" type="s">
+      <choices>
+        <choice value="interval"/>
+        <choice value="daily"/>
+        <choice value="manual"/>
+      </choices>
+      <default>'interval'</default>
+      <summary>When the quote changes</summary>
+    </key>
+    <key name="rotate-minutes" type="u">
+      <range min="1" max="1440"/>
+      <default>15</default>
+      <summary>Minutes between quotes in interval mode</summary>
+    </key>
+    <key name="order" type="s">
+      <choices>
+        <choice value="random"/>
+        <choice value="sequential"/>
+      </choices>
+      <default>'random'</default>
+      <summary>Shuffle (no repeats until all are shown) or go in order</summary>
+    </key>
+    <key name="animate" type="b">
+      <default>true</default>
+      <summary>Fade between quotes</summary>
+    </key>
+    <key name="notify" type="b">
+      <default>false</default>
+      <summary>Also send a notification when a new quote appears on its own</summary>
+    </key>
+
+    <!-- Look -->
+    <key name="icon" type="s">
+      <choices>
+        <choice value="none"/>
+        <choice value="spark"/>
+        <choice value="star"/>
+        <choice value="diamond"/>
+        <choice value="dot"/>
+        <choice value="chevron"/>
+      </choices>
+      <default>'spark'</default>
+      <summary>Symbol in front of the quote</summary>
+    </key>
+    <key name="quote-marks" type="b">
+      <default>true</default>
+      <summary>Wrap the quote in curly quotation marks</summary>
+    </key>
+    <key name="show-author" type="b">
+      <default>false</default>
+      <summary>Show the author in the top bar (always shown in the menu)</summary>
+    </key>
+    <key name="italic" type="b">
+      <default>true</default>
+      <summary>Italic text</summary>
+    </key>
+    <key name="max-length" type="u">
+      <range min="0" max="300"/>
+      <default>60</default>
+      <summary>Shorten quotes longer than this many characters in the top bar (0 = never)</summary>
+    </key>
+    <key name="use-custom-color" type="b">
+      <default>false</default>
+      <summary>Use a custom text color</summary>
+    </key>
+    <key name="text-color" type="s">
+      <default>'#c4b8ff'</default>
+      <summary>Custom text color</summary>
+    </key>
+
+    <!-- Panel -->
+    <key name="panel-position" type="s">
+      <choices>
+        <choice value="left"/>
+        <choice value="center"/>
+        <choice value="right"/>
+      </choices>
+      <default>'center'</default>
+      <summary>Panel area</summary>
+    </key>
+    <key name="panel-index" type="i">
+      <range min="-1" max="20"/>
+      <default>-1</default>
+      <summary>Position within the panel area (-1 = end)</summary>
+    </key>
+
+    <!-- Internal state -->
+    <key name="current-key" type="s">
+      <default>''</default>
+      <summary>Text of the quote currently shown (kept across lock/unlock)</summary>
+    </key>
+    <key name="current-day" type="s">
+      <default>''</default>
+      <summary>Date the current quote was picked</summary>
+    </key>
+  </schema>
+</schemalist>

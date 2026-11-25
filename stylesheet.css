@@ -1,0 +1,40 @@
+.mq-label {
+  padding: 0 2px;
+}
+
+.mq-card {
+  width: 24em;
+  padding: 12px 20px 6px;
+  spacing: 6px;
+}
+
+.mq-quote {
+  font-size: 1.15em;
+  font-style: italic;
+  line-height: 1.35;
+}
+
+.mq-author {
+  font-weight: bold;
+  padding-top: 4px;
+}
+
+.mq-meta {
+  font-size: 0.85em;
+  color: #9a9996;
+}
+
+.mq-actions {
+  spacing: 10px;
+  padding: 2px 0;
+}
+
+.mq-btn {
+  padding: 8px;
+  border-radius: 999px;
+  min-width: 0;
+}
+
+.mq-btn.mq-starred StIcon {
+  color: #f6d32d;
+}
